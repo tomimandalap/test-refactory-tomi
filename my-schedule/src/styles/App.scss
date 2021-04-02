@@ -1,0 +1,76 @@
+$color: (bg-body: #FBFCFF,
+  warning: #ffbb00,
+  primary: #0442D0,
+  danger: #FB3453,
+  complete: #D3D5DB,
+  bg-danger: #FEEAEB,
+  bg-complete: #F2F4F8,
+  fcolor: #525C77,
+  t-mobile: #FABE2C);
+
+$size: (logo: 30px,
+  h1: 35px,
+  h2: 25px,
+  xl: 22px,
+  l: 20px,
+  p: 15px,
+  img: 52px,
+  img-m: 56px);
+
+body {
+  background: #000 !important;
+}
+
+.t-mobile {
+  color: map-get($color, t-mobile);
+}
+
+.c-h1 {
+  color: map-get($color, fcolor);
+}
+
+.f-logo {
+  font-size: map-get($size, logo);
+}
+
+.f-h1 {
+  font-size: map-get($size, h1);
+}
+
+.f-h2 {
+  font-size: map-get($size, h2);
+}
+
+.f-xl {
+  font-size: map-get($size, xl);
+}
+
+.f-l {
+  font-size: map-get($size, l);
+}
+
+.f-p {
+  font-size: map-get($size, p);
+}
+
+.bg-primary {
+  background: map-get($color, primary);
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.img-profile {
+  vertical-align: middle;
+  width: map-get($size, img);
+  height: map-get($size, img);
+  border-radius: 50%;
+}
+
+.img-mobile {
+  vertical-align: middle;
+  width: map-get($size, img-m);
+  height: map-get($size, img-m);
+  border-radius: 50%;
+}
