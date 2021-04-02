@@ -1,7 +1,7 @@
 # vue-test-code (Soal 4)
 
 ## Debugging 
-Mencari debugging pada soal nomor 4 dari clone github [refactory.id](https://github.com/refactory-id/recruitment-vuejs-test). Dari permaslahan tersebut diperlukan beberapa analisa dan pemecahan masalah untuk itu saya melakukannya dengan beberapa cara berikut.
+Mencari debugging pada soal nomor 4 dari clone github [refactory.id](https://github.com/refactory-id/recruitment-vuejs-test). Dari permaslahan tersebut diperlukan beberapa analisa dan pemecahan masalah untuk itu dilakukan dengan beberapa cara berikut.
 
 1. Clone proejct dari https://github.com/refactory-id/recruitment-vuejs-test menggunakan perintah **git clone url taget**.
 2. Install framework/library dari project **recruitment-vuejs-test** dengan mengetikan **npm i** atau **npm install** di terminal VSCode tunggu hingga proses selesai.
@@ -27,7 +27,7 @@ Mencari debugging pada soal nomor 4 dari clone github [refactory.id](https://git
 ### Gambar 4
 ![bug4](https://user-images.githubusercontent.com/43200304/113403236-82b03a00-93d0-11eb-8f7a-fa4388542d15.PNG)
 
-7. Alhasil problem **error** sudah berhasil ditangani, selanjutnya adalah fix problem dari **mapState**. Untuk mempermudah simulasi ini, sementara saya beri tanda // (garis miring) untuk menonaktifkan **line 36: 10** berikut **import { INCREMENT } from "../mutation-types";**
+7. Alhasil problem **error** sudah berhasil ditangani, selanjutnya adalah fix problem dari **mapState**. Untuk mempermudah simulasi ini, sementara diberi tanda // (garis miring) untuk menonaktifkan **line 36: 10** berikut **import { INCREMENT } from "../mutation-types";**
 
 ### Gambar 5
 ![bug5](https://user-images.githubusercontent.com/43200304/113403238-8348d080-93d0-11eb-9de6-55519759c7d2.PNG)
@@ -37,7 +37,7 @@ Mencari debugging pada soal nomor 4 dari clone github [refactory.id](https://git
 ### Gambar 6
 ![bug6](https://user-images.githubusercontent.com/43200304/113403240-8348d080-93d0-11eb-9943-e1f54d2f7310.PNG)
 
-9. Sedangkan untuk menggunakan **mapState** yaitu dengan menuliskan ke dalam **computed Vue**. Lalu didalam mapState akan saya panggil variabel **text** dari **state** dengan membuat inisial baru yaitu **stateText** seperti **Gambar 7**.
+9. Sedangkan untuk menggunakan **mapState** yaitu dengan menuliskan ke dalam **computed Vue**. Lalu didalam mapState akan memanggil variabel **text** dari **state** dengan membuat inisial baru yaitu **stateText** seperti **Gambar 7**.
 
 ### Gambar 7
 ![bug7](https://user-images.githubusercontent.com/43200304/113403241-83e16700-93d0-11eb-9ad0-7e51845d4472.PNG)
