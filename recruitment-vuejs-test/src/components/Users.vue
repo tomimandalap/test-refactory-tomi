@@ -353,7 +353,7 @@ export default {
 }
 @media (max-width: 575.98px) {
   .card {
-    width: 80%;
+    width: 83%;
   }
 }
 </style>
