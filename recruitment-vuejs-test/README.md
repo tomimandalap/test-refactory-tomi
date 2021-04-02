@@ -42,7 +42,7 @@ Mencari debugging pada soal nomor 4 dari clone github [refactory.id](https://git
 ### Gambar 7
 ![bug7](https://user-images.githubusercontent.com/43200304/113403241-83e16700-93d0-11eb-9ad0-7e51845d4472.PNG)
 
-10. Problems **mapState** telah berhasil diselesaikan, akan tetapi saya ingin menggunakan **stateText** untuk menampilkan tulisan **Users** ke **HTML** dengan menuliskan **{{stateText}}** ke dalam tag HTML **div** yang mempunyai nama class **user-count**. Hasil dapat dilihat pada **Gambar 8** dan tampilan untuk browser dapat dilihat pada **Gambar 9**.
+10. Problems **mapState** telah berhasil diselesaikan, akan tetapi jika ingin menggunakan **stateText** untuk menampilkan tulisan **Users** ke **HTML** dengan menuliskan **{{stateText}}** ke dalam tag HTML **div** yang mempunyai nama class **user-count**. Hasil dapat dilihat pada **Gambar 8** dan tampilan untuk browser dapat dilihat pada **Gambar 9**.
 
 ### Gambar 8
 ![bug8](https://user-images.githubusercontent.com/43200304/113403243-8479fd80-93d0-11eb-9938-386323dc4822.PNG)
