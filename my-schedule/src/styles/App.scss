@@ -32,6 +32,10 @@ $size: (logo: 30px,
   color: map-get($color, primary);
 }
 
+.c-white {
+  color: map-get($color, complete);
+}
+
 .f-logo {
   font-size: map-get($size, logo);
 }

@@ -14,8 +14,8 @@
         <v-toolbar-title class="font-weight-medium mr-5"
           >Tomi Mandala Putra</v-toolbar-title
         >
-        <v-btn icon>
-          <v-icon class="cursor mr-5">mdi-cog-outline</v-icon>
+        <v-btn icon class="mr-2">
+          <v-icon class="cursor">mdi-cog-outline</v-icon>
         </v-btn>
       </v-toolbar>
     </v-card>
@@ -33,3 +33,11 @@
     </v-card>
   </div>
 </template>
+<script>
+import mixAlert from '../helpers/mixins'
+export default {
+  mixins: [mixAlert],
+  methods: {
+  }
+}
+</script>

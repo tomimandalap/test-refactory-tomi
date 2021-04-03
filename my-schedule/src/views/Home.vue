@@ -62,6 +62,7 @@
           <v-row class="mt-5">
             <v-col md="3" sm="12">
               <v-btn
+                @click="btnCreate"
                 x-large
                 elevation="5"
                 color="primary"
@@ -99,7 +100,22 @@
                   max-height="400"
                 >
                   <div style="max-height: 880px" class="pa-5 bg-body">
-                    <div v-for="(item, i) in users" :key="i">
+                    <div v-if="isLoading" class="text-center">
+                      <v-card
+                        elevation="5"
+                        color="#FFF"
+                        class="rounded-lg pa-3 mb-10"
+                        light
+                      >
+                        <h2 class="mt-10 mb-10">Load task today</h2>
+                        <v-progress-circular
+                          indeterminate
+                          color="primary"
+                          class="mb-10"
+                        ></v-progress-circular>
+                      </v-card>
+                    </div>
+                    <div v-else v-for="(item, i) in users" :key="i">
                       <v-card
                         elevation="5"
                         color="#FFF"
@@ -143,7 +159,7 @@
                             </v-card-subtitle>
                           </div>
                           <div class="b align-self-end">
-                            <v-btn icon class="mr-1">
+                            <v-btn @click="btnEdit" icon class="mr-1">
                               <v-icon medium>mdi-pencil</v-icon>
                             </v-btn>
                             <v-btn icon>
@@ -155,9 +171,10 @@
                     </div>
                   </div>
                 </v-sheet>
-                <div class="text-center mt-5">
+                <!-- pagination -->
+                <!-- <div class="text-center mt-5">
                   <v-pagination v-model="page" :length="2"></v-pagination>
-                </div>
+                </div> -->
               </v-card>
             </v-col>
           </v-row>
@@ -169,43 +186,44 @@
     <v-container class="d-flex d-sm-none">
       <h3>Small</h3>
     </v-container>
+    <!-- Modals -->
+    <v-container fluid>
+      <Modal :dataDialog="dialog" v-on:emitDialog="getEmit" />
+    </v-container>
   </div>
 </template>
 
 <script>
+import Modal from '../components/Modal'
+import mixTask from '../helpers/taks'
 export default {
   name: 'Home',
+  mixins: [mixTask],
   data () {
     return {
       page: 1,
+      dialog: false,
+      isLoading: false,
       collapseOnScroll: true,
-      picker: new Date().toISOString().substr(0, 10),
-      users: [
-        {
-          status: false,
-          title: 'Daily Standup',
-          target: ['1. Dont forget prepare your report and any blocker in Front end.', '2. Telling Project Manager for new assignment.']
-        },
-        {
-          status: true,
-          title: 'Meeting With Refactory.ID',
-          target: ['1. Presentation FE', '2. Fix Desain']
-        },
-        {
-          status: true,
-          title: 'Meeting With PT. Digital',
-          target: ['1. Lorem Ipsum Dolor Amet', '2. Lorem Ipsum Dolor Amet']
-        },
-        {
-          status: true,
-          title: 'Meeting With PT. Garuda',
-          target: ['1. Lorem Ipsum Dolor Amet', '2. Lorem Ipsum Dolor Amet', '3. Lorem Ipsum Dolor Amet']
-        }
-      ]
+      picker: new Date().toISOString().substr(0, 10)
+    }
+  },
+  components: {
+    Modal
+  },
+  methods: {
+    btnCreate () {
+      this.dialog = true
+    },
+    getEmit (state) {
+      this.dialog = state
     }
   },
   mounted () {
-    // console.log(this.users)
+    this.isLoading = true
+    setTimeout(() => {
+      this.isLoading = false
+    }, 5000)
   }
 }
 </script>
