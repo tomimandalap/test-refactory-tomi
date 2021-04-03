@@ -5,6 +5,7 @@ $color: (bg-body: #FBFCFF,
   complete: #D3D5DB,
   bg-danger: #FEEAEB,
   bg-complete: #F2F4F8,
+  bg-footer: #FFFFFF,
   fcolor: #525C77,
   t-mobile: #FABE2C);
 
@@ -13,13 +14,11 @@ $size: (logo: 30px,
   h2: 25px,
   xl: 22px,
   l: 20px,
+  md: 18px,
   p: 15px,
+  x-sm: 10px,
   img: 52px,
   img-m: 56px);
-
-body {
-  background: #000 !important;
-}
 
 .t-mobile {
   color: map-get($color, t-mobile);
@@ -27,6 +26,10 @@ body {
 
 .c-h1 {
   color: map-get($color, fcolor);
+}
+
+.c-primary {
+  color: map-get($color, primary);
 }
 
 .f-logo {
@@ -49,12 +52,32 @@ body {
   font-size: map-get($size, l);
 }
 
+.f-md {
+  font-size: map-get($size, md);
+}
+
 .f-p {
   font-size: map-get($size, p);
 }
 
+.f-xs {
+  font-size: map-get($size, x-sm);
+}
+
 .bg-primary {
   background: map-get($color, primary);
+}
+
+.bg-white {
+  background: map-get($color, bg-footer)
+}
+
+.bg-danger {
+  background: map-get($color, bg-danger);
+}
+
+.bg-body {
+  background: map-get($color, bg-body);
 }
 
 .cursor {

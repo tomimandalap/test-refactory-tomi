@@ -3,8 +3,8 @@
     <!-- only sm to large -->
     <v-card flat tile class="d-none d-sm-flex">
       <v-toolbar dense color="#0442D0" dark height="94px">
-        <v-toolbar-title class="font-weight-medium f-logo"
-          >Schedule</v-toolbar-title
+        <v-toolbar-title class="font-weight-medium f-logo text-uppercase"
+          >My-Schedule</v-toolbar-title
         >
 
         <v-spacer></v-spacer>
