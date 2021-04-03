@@ -99,7 +99,7 @@
                   class="overflow-y-auto"
                   max-height="400"
                 >
-                  <div style="max-height: 880px" class="pa-5 bg-body">
+                  <div style="min-height: 900px" class="pa-5 bg-body">
                     <div v-if="isLoading" class="text-center">
                       <v-card
                         elevation="5"
@@ -107,7 +107,7 @@
                         class="rounded-lg pa-3 mb-10"
                         light
                       >
-                        <h2 class="mt-10 mb-10">Load task today</h2>
+                        <h2 class="mt-10 mb-10">Load task</h2>
                         <v-progress-circular
                           indeterminate
                           color="primary"
@@ -159,10 +159,10 @@
                             </v-card-subtitle>
                           </div>
                           <div class="b align-self-end">
-                            <v-btn @click="btnEdit" icon class="mr-1">
+                            <v-btn @click="btnEdit(item.id)" icon class="mr-1">
                               <v-icon medium>mdi-pencil</v-icon>
                             </v-btn>
-                            <v-btn icon>
+                            <v-btn @click="btnDelete" icon>
                               <v-icon medium>mdi-trash-can</v-icon>
                             </v-btn>
                           </div>
@@ -189,37 +189,65 @@
     <!-- Modals -->
     <v-container fluid>
       <Modal :dataDialog="dialog" v-on:emitDialog="getEmit" />
+      <ModalEdit :dataEdit="{ isEdit, idEdit }" v-on:emitEdit="getEdit" />
+      <ModalDelete :dataDelete="isDelete" v-on:emitDelete="getDelete" />
     </v-container>
   </div>
 </template>
 
 <script>
 import Modal from '../components/Modal'
+import ModalEdit from '../components/ModalEdit'
+import ModalDelete from '../components/ModalDelete'
 import mixTask from '../helpers/taks'
+import mixAlert from '../helpers/mixins'
+import { mapActions } from 'vuex'
 export default {
   name: 'Home',
-  mixins: [mixTask],
+  mixins: [mixTask, mixAlert],
   data () {
     return {
       page: 1,
       dialog: false,
+      isEdit: false,
+      idEdit: null,
+      isDelete: false,
       isLoading: false,
       collapseOnScroll: true,
       picker: new Date().toISOString().substr(0, 10)
     }
   },
   components: {
-    Modal
+    Modal,
+    ModalEdit,
+    ModalDelete
   },
   methods: {
+    ...mapActions({
+      getTask: 'task'
+    }),
     btnCreate () {
       this.dialog = true
     },
     getEmit (state) {
       this.dialog = state
+    },
+    btnEdit (id) {
+      this.idEdit = id
+      this.isEdit = true
+    },
+    getEdit (state) {
+      this.isEdit = state
+    },
+    btnDelete () {
+      this.isDelete = true
+    },
+    getDelete (state) {
+      this.isDelete = state
     }
   },
   mounted () {
+    this.getTask(this.users)
     this.isLoading = true
     setTimeout(() => {
       this.isLoading = false
@@ -227,5 +255,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-</style>

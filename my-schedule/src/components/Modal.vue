@@ -89,6 +89,7 @@ export default {
       }
     },
     handleCreate () {
+      this.swalLoading('Process Create')
       this.$emit('emitDialog', false)
       console.log(this.form)
       this.form = {
@@ -96,6 +97,12 @@ export default {
         description: '',
         date: new Date().toISOString().substr(0, 10)
       }
+      setTimeout(() => {
+        this.swalLoadingClose()
+        setTimeout(() => {
+          this.alertlabel('success', 'Create task success')
+        }, 1000)
+      }, 3000)
     }
   }
 }

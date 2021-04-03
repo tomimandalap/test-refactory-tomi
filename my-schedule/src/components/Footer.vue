@@ -15,16 +15,52 @@
         <v-btn class="mx-8" color="#0442D0" icon>
           <v-icon large> mdi-plus-box-outline </v-icon>
         </v-btn>
-        <v-btn class="mx-8" color="#0442D0" icon>
-          <v-icon large> mdi-cog-outline </v-icon>
-        </v-btn>
+
+        <v-menu open-on-hover top offset-y class="text-center">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn class="mx-8" color="#0442D0" icon v-bind="attrs" v-on="on">
+              <v-icon large> mdi-cog-outline </v-icon>
+            </v-btn>
+          </template>
+          <v-list>
+            <v-list-item>
+              <v-list-item-action>
+                <v-btn
+                  @click="btnProfile"
+                  text
+                  color="blue"
+                  class="text-capitalize"
+                  ><v-icon class="mr-3">mdi-account-circle</v-icon
+                  >Profile</v-btn
+                >
+                <v-btn
+                  @click="btnLogout"
+                  text
+                  color="red"
+                  class="text-capitalize"
+                  ><v-icon class="mr-3">mdi-logout</v-icon>Logout</v-btn
+                >
+              </v-list-item-action>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </v-card-title>
     </v-card>
   </v-footer>
 </template>
 <script>
+import mixAlert from '../helpers/mixins'
 export default {
+  mixins: [mixAlert],
   data: () => ({
-  })
+  }),
+  methods: {
+    btnProfile () {
+      this.alertPopUp('info', 'Comming Soon', 'This feature is not available for demo accounts!')
+    },
+    btnLogout () {
+      this.alertPopUp('info', 'Comming Soon', 'This feature is not available for demo accounts!')
+    }
+  }
 }
 </script>
