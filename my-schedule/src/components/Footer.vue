@@ -4,15 +4,15 @@
     elevation="8"
     color="white"
     padless
-    height="100"
+    height="70"
     class="d-flex d-sm-none"
   >
     <v-card class="flex" flat tile>
       <v-card-title class="justify-center bg-white">
-        <v-btn class="mx-8" color="#0442D0" icon>
+        <v-btn @click="btnList" class="mx-8" color="#0442D0" icon>
           <v-icon large> mdi-notebook-check-outline </v-icon>
         </v-btn>
-        <v-btn class="mx-8" color="#0442D0" icon>
+        <v-btn @click="btnCreate" class="mx-8" color="#0442D0" icon>
           <v-icon large> mdi-plus-box-outline </v-icon>
         </v-btn>
 
@@ -46,15 +46,32 @@
         </v-menu>
       </v-card-title>
     </v-card>
+    <v-container>
+      <Modal :dataDialog="dialog" v-on:emitDialog="getEmit" />
+    </v-container>
   </v-footer>
 </template>
 <script>
+import Modal from '../components/Modal'
 import mixAlert from '../helpers/mixins'
 export default {
   mixins: [mixAlert],
   data: () => ({
+    dialog: false
   }),
+  components: {
+    Modal
+  },
   methods: {
+    btnList () {
+      this.alertPopUp('info', 'Comming Soon', 'This feature is not available for demo accounts!')
+    },
+    btnCreate () {
+      this.dialog = true
+    },
+    getEmit (state) {
+      this.dialog = state
+    },
     btnProfile () {
       this.alertPopUp('info', 'Comming Soon', 'This feature is not available for demo accounts!')
     },

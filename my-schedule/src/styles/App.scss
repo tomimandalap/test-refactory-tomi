@@ -1,6 +1,7 @@
 $color: (bg-body: #FBFCFF,
   warning: #ffbb00,
   primary: #0442D0,
+  secondary: #FF9124,
   danger: #FB3453,
   complete: #D3D5DB,
   bg-danger: #FEEAEB,
@@ -16,6 +17,7 @@ $size: (logo: 30px,
   l: 20px,
   md: 18px,
   p: 15px,
+  sm: 12px,
   x-sm: 10px,
   img: 52px,
   img-m: 56px);
@@ -30,6 +32,10 @@ $size: (logo: 30px,
 
 .c-primary {
   color: map-get($color, primary);
+}
+
+.c-secondary {
+  color: map-get($color, secondary);
 }
 
 .c-white {
@@ -58,6 +64,10 @@ $size: (logo: 30px,
 
 .f-md {
   font-size: map-get($size, md);
+}
+
+.f-sm {
+  font-size: map-get($size, sm);
 }
 
 .f-p {
@@ -100,4 +110,8 @@ $size: (logo: 30px,
   width: map-get($size, img-m);
   height: map-get($size, img-m);
   border-radius: 50%;
+}
+
+.scroll {
+  overflow-y: scroll
 }

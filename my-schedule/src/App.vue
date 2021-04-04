@@ -4,7 +4,7 @@
     <v-main>
       <router-view />
     </v-main>
-    <Footer />
+    <Footer class="overflow-hidden" />
   </v-app>
 </template>
 <script>
