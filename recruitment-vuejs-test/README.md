@@ -52,7 +52,7 @@ Mencari debugging pada soal nomor 4 dari clone github [refactory.id](https://git
 
 11. Selanjutnya menampilkan data dari url https://jsonplaceholder.typicode.com/users di **mounted vue** menggunakan **Axios** dengan method **get**. Alhasil data belum dapat ditampilkan karena ada beberapa kesalahan yang ada di **store.js** dan **mutation-types.js**.
   - Pertama buka file **mutation-types.js** kemudian ubah nilai **‘SET_DATA’** dengan **‘setData’**.
-  - Kedua buka file **store.js** kemudian ubah variable **list** dalam **state vuex** menjadi **ists**. Lalu ubah nama **setDatas** di dalam **actions vuex** menjadi **setData**. Hasil sebelum get data dapat dilihat pada **Gambar 10** sedangkan hasil setelah berhasil get data dapat dilihat pada **Gambar 11**.
+  - Kedua buka file **store.js** kemudian ubah variable **list** dalam **state vuex** menjadi **lists**. Lalu ubah nama **setDatas** di dalam **actions vuex** menjadi **setData**. Hasil sebelum get data dapat dilihat pada **Gambar 10** sedangkan hasil setelah berhasil get data dapat dilihat pada **Gambar 11**.
 
 ### Gambar 10
 ![bug10](https://user-images.githubusercontent.com/43200304/113403247-85ab2a80-93d0-11eb-9174-bc8d6728ef87.PNG)
@@ -93,5 +93,4 @@ Perbuhan
 ### Gambar 15
 ![bug15](https://user-images.githubusercontent.com/43200304/113403226-7f1cb300-93d0-11eb-8cc1-c45dbb29002f.PNG)
 
-
-
+---
