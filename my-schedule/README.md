@@ -15,6 +15,7 @@ Aplikasi ini menggunakan styling pre-processor (**Sass**) serta menggunakan libr
 
 ## Klik
 1. [Tampilan Web](#view_web)
+2. [Tampilan Mobile](#view_mobile)
 
 ## Project setup
 1. Silahkan clone project ini dengan perintah git clone.
@@ -62,5 +63,22 @@ Berikut ini beberapa tampilan hasil dari project ini.
 ### Tampilan Button Setting
 ![Capture7](https://user-images.githubusercontent.com/43200304/113499207-4dc1f580-953e-11eb-9fa0-40264da51cb5.PNG)
 
+
+---
+
+## Tampilan Mobile <a name="view_mobile"></a>
+
+![responive1](https://user-images.githubusercontent.com/43200304/113499770-ca56d300-9542-11eb-92f2-47890b37f943.PNG)
+![responive2](https://user-images.githubusercontent.com/43200304/113499212-5286a980-953e-11eb-8ed1-e2bd1274bea2.PNG)
+![responive3](https://user-images.githubusercontent.com/43200304/113499213-531f4000-953e-11eb-9a40-6fb80ef0ae49.PNG)
+![responive4](https://user-images.githubusercontent.com/43200304/113499214-53b7d680-953e-11eb-946b-918f0513e8b7.PNG)
+![responive5](https://user-images.githubusercontent.com/43200304/113499217-54506d00-953e-11eb-8ddb-b8b01f9415a1.PNG)
+![responive6](https://user-images.githubusercontent.com/43200304/113499219-54e90380-953e-11eb-96d1-6cdd8dd6d031.PNG)
+![responive7](https://user-images.githubusercontent.com/43200304/113499220-55819a00-953e-11eb-8759-544d7d54cd99.PNG)
+![responive8](https://user-images.githubusercontent.com/43200304/113499221-55819a00-953e-11eb-9927-ad9756745da6.PNG)
+![responive9](https://user-images.githubusercontent.com/43200304/113499222-561a3080-953e-11eb-92dc-1f4e8a00532e.PNG)
+![responive10](https://user-images.githubusercontent.com/43200304/113499223-56b2c700-953e-11eb-9f8b-bc3fdc16c37e.PNG)
+![responive11](https://user-images.githubusercontent.com/43200304/113499224-574b5d80-953e-11eb-8fc7-7135de5b67cd.PNG)
+![responive12](https://user-images.githubusercontent.com/43200304/113499225-57e3f400-953e-11eb-8c54-e50840b0af02.PNG)
 
 ---
