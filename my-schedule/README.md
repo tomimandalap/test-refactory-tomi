@@ -6,7 +6,7 @@ Aplikasi **my-schedule** merupakan sebuah prototipe aplikasi yang dapat digunaka
 2. Vuex.
 3. Vuetify
 
-Aplikasi ini menggunakan styling pre-processor (**Sass**) serta menggunakan library ***sweetalert2*** sebagai pengganti bawaan browser guna untuk mempercantik tampilannya. Untuk dapat menggunakan custom alert hanya cukup memanggilanya melalui **mixins** dari file **/src/helpers/mixins.js** cukup menambahkan printah **this** didalam **methods** vuenya.
+Aplikasi ini menggunakan styling pre-processor (**Sass**) serta menggunakan library ***sweetalert2*** sebagai pengganti **alert** bawaan browser guna untuk mempercantik tampilannya. Untuk dapat menggunakan custom alert hanya cukup memanggilanya melalui **mixins** dari file **/src/helpers/mixins.js** cukup menambahkan printah **this** didalam **methods** vuenya.
 
 ## Requirement Project
 1. Fitur Calender
@@ -23,6 +23,8 @@ Aplikasi ini menggunakan styling pre-processor (**Sass**) serta menggunakan libr
   ```
   npm run serve
   ```
+
+---
 
 # Tampilan
 Berikut ini beberapa tampilan hasil dari project ini.
@@ -56,3 +58,6 @@ Berikut ini beberapa tampilan hasil dari project ini.
 
 ### Tampilan Button Setting
 ![Capture7](https://user-images.githubusercontent.com/43200304/113499207-4dc1f580-953e-11eb-9fa0-40264da51cb5.PNG)
+
+
+---
