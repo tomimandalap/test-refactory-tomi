@@ -27,23 +27,26 @@
               <v-card-title class="font-weight-bold c-h1 f-h2 mt-n2 mb-4">
                 Choose Date
               </v-card-title>
-              <v-date-picker
-                light
-                color="#0442D0"
-                elevation="2"
-                class="rounded-xl d-none d-sm-flex"
-                locale="en"
-                v-model="item.date"
-              ></v-date-picker>
-              <v-date-picker
-                light
-                full-width
-                color="#0442D0"
-                elevation="2"
-                class="d-flex d-sm-none"
-                locale="en"
-                v-model="item.date"
-              ></v-date-picker>
+              <div class="d-none d-sm-flex">
+                <v-date-picker
+                  light
+                  color="#0442D0"
+                  elevation="2"
+                  class="rounded-xl"
+                  locale="en"
+                  v-model="item.date"
+                ></v-date-picker>
+              </div>
+              <div class="d-flex d-sm-none">
+                <v-date-picker
+                  light
+                  full-width
+                  color="#0442D0"
+                  elevation="2"
+                  locale="en"
+                  v-model="item.date"
+                ></v-date-picker>
+              </div>
               <v-card-actions class="mt-8 justify-center">
                 <v-btn
                   @click="btnCancel"
