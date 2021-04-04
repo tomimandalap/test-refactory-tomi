@@ -13,6 +13,9 @@ Aplikasi ini menggunakan styling pre-processor (**Sass**) serta menggunakan libr
 2. Fitur Modals
 3. Contains 1 screen
 
+## Klik
+1. [Tampilan Web](#view_web)
+
 ## Project setup
 1. Silahkan clone project ini dengan perintah git clone.
 2. Kemudian ketikan perintah berikut ini di terminal VSCode
@@ -20,16 +23,16 @@ Aplikasi ini menggunakan styling pre-processor (**Sass**) serta menggunakan libr
    npm install atau npm i
    ```
 4. Untuk menjalankanya silahkan ketikan perintah berikut ini
-  ```
-  npm run serve
-  ```
+   ```
+   npm run serve
+   ```
 
 ---
 
 # Tampilan
 Berikut ini beberapa tampilan hasil dari project ini.
 
-## Tampilan Web
+## Tampilan Web <a name="view_web"></a>
 
 ### Tampilan Pertama
 ![Capture1](https://user-images.githubusercontent.com/43200304/113499198-44d12400-953e-11eb-8c90-2139290f849b.PNG)
